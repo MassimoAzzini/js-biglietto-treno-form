@@ -17,23 +17,27 @@
   <title>Document</title>
 </head>
 <body class="bg-secondary w-100 vh-100">
-  <!-- <div class="container d-flex justify-content-center">
-    <div class="calcolo-biglietto">
+  <div class="container h-100">
+    <div class="calcolo-biglietto h-50 text-center my-5">
       <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-      <div class="content w-100 bg-light">
+      <div class="content w-100 h-50 bg-light">
         <div class="row justify-content-between ">
           <div class="col">
-            <label for="firstName" class="form-label">Nome</label>
-            <input id="firstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
+            <label for="first-name" class="form-label">Nome</label>
+            <input id="first-name" type="text" class="form-control" placeholder="First name" aria-label="First name">
           </div>
+  
           <div class="col">
             <label for="last-name" class="form-label">Cognome</label>
             <input id="last-name" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
           </div>
+  
           <div class="col">
             <label for="km" class="form-label">Quanti KM?</label>
-            <input id="km" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            <input id="km" type="text" class="form-control" placeholder="Km" aria-label="km">
+            <!-- <div id="output-km"></div> -->
           </div>
+  
           <div class="col">
             <label for="age" class="form-label">Età</label>
             <select id="age" class="form-select">
@@ -44,34 +48,64 @@
             </select>
           </div>
         </div>
+  
         <div class="button text-center">
           <button class="btn btn-secondary m-3">Genera</button>
-          <button class="btn btn-secondary m-3">Annulla</button>
+          <button class="btn btn-secondary m-3" type="reset">Annulla</button>
         </div>
-        
-
       </div>
-
-    </div>
-    <div class="biglietto bg-light">
-
     </div>
 
+    <div class="emissione-biglietto h-50 text-center">
+      <h2>IL TUO BIGLIETTO</h2>
+      <div class="biglietto bg-light w-100 h-50 my-3 mx-auto">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-4">
+              <h3>DATI PASSEGGERO</h3>
+              <div><h4>Nome:</h4><span id="output-firstname"></span></div>
+              <div><h4>Cognome:</h4><span id="output-lastname"></span></div>
+            </div>
+            <div class="col-8 d-flex justify-content-around">
+              <div>
+                <h4>TARIFFA</h4>
+                <span id="output-discount"></span>
+              </div>
+              <div>
+                <h4>CARROZZA</h4>
+                <span id="carrozza"></span>
+              </div>
+              <div>
+                <h4>CODICE BIGLIETTO</h4>
+                <span id="code-tiket"></span>
+              </div>
+              <div>
+                <h4>PREZZO</h4>
+                <span id="output-finalprice"></span>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+
+  </div>
 
 
 
 
 
 
+  <!-- <div id="first-name">Massimo</div>
+  <div id="last-name">Azzini</div>
+  <div id="km">0</div>
+  <div id="age">Minorenne</div>
 
-
+  <div id="output">
 
   </div> -->
-
-  <div id="first-name">Massimo</div>
-  <div id="last-name">Azzini</div>
-  <div id="km">100</div>
-  <div id="age">Maggiorenne</div>
   
 
 
