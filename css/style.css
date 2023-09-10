@@ -1,0 +1,43 @@
+body {
+  background-image: url(../img/trenitalia2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.calcolo-biglietto,
+#emissione-biglietto {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2 solid black;
+  border-radius: 20px;
+}
+
+.calcolo-biglietto {
+  color: #006464;
+}
+
+#emissione-biglietto {
+  color: #da142d;
+}
+
+.biglietto {
+  color: black;
+  border: 2 solid black;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.biglietto span {
+  font-size: 1.3rem;
+}
+
+.biglietto .dati-passeggero {
+  background-color: #E5F7F8;
+  border-right: 1px dashed black;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

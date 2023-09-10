@@ -1,5 +1,4 @@
-console.log('ciao');
-
+// definizione variabili
 const button1 = document.getElementById('btn-1');
 const button2 = document.getElementById('btn-2');
 const emissioneBiglietto = document.getElementById('emissione-biglietto');
@@ -12,7 +11,7 @@ let age;
 let finalPrice;
 let discountMessage;
 
-
+// funzioni al click del bottone GENERA
 button1.addEventListener('click', function(){
   
   firstName = document.getElementById('first-name').value;
@@ -61,8 +60,6 @@ button2.addEventListener('click', function(){
   location.reload()
   
 });
-
-
 
 
 function getRndInteger(min, max) {

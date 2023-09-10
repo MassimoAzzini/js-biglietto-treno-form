@@ -8,93 +8,102 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-  <!-- CSS
-  <link rel="stylesheet" href="css/style.css"> -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Document</title>
 </head>
-<body class="bg-secondary w-100 vh-100">
+<body class="w-100 vh-100">
   <div class="container h-100">
-    <div class="calcolo-biglietto h-50 text-center my-5">
-      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-      <div class="content w-100 h-50 bg-light">
-        <form>
-
-          <div class="row justify-content-between ">
-            <div class="col">
-              <label for="first-name" class="form-label">Nome</label>
-              <input id="first-name" type="text" class="form-control" placeholder="First name" aria-label="First name">
-            </div>
     
-            <div class="col">
-              <label for="last-name" class="form-label">Cognome</label>
-              <input id="last-name" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-            </div>
-    
-            <div class="col">
-              <label for="km" class="form-label">Quanti KM?</label>
-              <input id="km" type="text" class="form-control" placeholder="Km" aria-label="km">
-              <!-- <div id="output-km"></div> -->
-            </div>
-    
-            <div class="col">
-              <label for="age" class="form-label">Età</label>
-              <select id="age" class="form-select">
-                <option selected>Scegli...</option>
-                <option>Minorenne</option>
-                <option>Maggiorenne</option>
-                <option>Over65</option>
-              </select>
-            </div>
-          </div>
-          
-          <div class="button text-center">
-            <button id="btn-1" class="btn btn-secondary m-3" type="button" >Genera</button>
-            <button id="btn-2" class="btn btn-secondary m-3" type="reset">Annulla</button>
-          </div>
+    <!-- FORM PER TICKET -->
+    <section class="h-50 d-flex align-items-center">
+      <div class="w-100 calcolo-biglietto text-center p-3">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="content-calc w-100 p-4">
 
-        </form>
-
-      </div>
-    </div>
-
-    <div id="emissione-biglietto" class="d-none h-50 text-center">
-      <h2>IL TUO BIGLIETTO</h2>
-      <div class="biglietto bg-light w-100 h-50 my-3 mx-auto">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-4">
-              <h3>DATI PASSEGGERO</h3>
-              <div><h4>Nome:</h4><span id="output-firstname"></span></div>
-              <div><h4>Cognome:</h4><span id="output-lastname"></span></div>
+          <form>
+            <div class="row justify-content-between ">
+              <div class="col">
+                <label for="first-name" class="form-label">Nome</label>
+                <input id="first-name" type="text" class="form-control" placeholder="First name" aria-label="First name">
+              </div>
+      
+              <div class="col">
+                <label for="last-name" class="form-label">Cognome</label>
+                <input id="last-name" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+              </div>
+      
+              <div class="col">
+                <label for="km" class="form-label">Chilometri del tragitto?</label>
+                <input id="km" type="text" class="form-control" placeholder="Km" aria-label="km">
+                <!-- <div id="output-km"></div> -->
+              </div>
+      
+              <div class="col">
+                <label for="age" class="form-label">Età</label>
+                <select id="age" class="form-select">
+                  <option selected>Scegli...</option>
+                  <option>Minorenne</option>
+                  <option>Maggiorenne</option>
+                  <option>Over65</option>
+                </select>
+              </div>
             </div>
-            <div class="col-8 d-flex justify-content-around">
-              <div>
-                <h4>TARIFFA</h4>
-                <span id="output-discount"></span>
-              </div>
-              <div>
-                <h4>CARROZZA</h4>
-                <span id="carrozza"></span>
-              </div>
-              <div>
-                <h4>CODICE BIGLIETTO</h4>
-                <span id="code-tiket"></span>
-              </div>
-              <div>
-                <h4>PREZZO</h4>
-                <span id="output-finalprice"></span><span>€</span>
-              </div>
+            
+            <div class="button text-center">
+              <button id="btn-1" class="btn btn-secondary m-3" type="button" >Genera</button>
+              <button id="btn-2" class="btn btn-secondary m-3" type="reset">Annulla</button>
+            </div>
+          </form>
   
+        </div>
+      </div>
+    </section>
+    <!-- end FORM PER TICKET -->
+
+
+    <!-- TICKET GENERATO -->
+    <section class="h-50 d-flex align-items-center">
+      <div id="emissione-biglietto" class="w-100 d-none text-center p-3">
+        <h2>IL TUO BIGLIETTO</h2>
+
+        <div class="biglietto w-75 mx-auto">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-4 dati-passeggero">
+                <h3>DATI PASSEGGERO</h3>
+                <div><h6>Nome:</h6><span id="output-firstname"></span></div>
+                <div><h6>Cognome:</h6><span id="output-lastname"></span></div>
+              </div>
+
+              <div class="col-8 d-flex justify-content-around">
+                <div>
+                  <h6>TARIFFA</h6>
+                  <span id="output-discount"></span>
+                </div>
+                <div>
+                  <h6>CARROZZA</h6>
+                  <span id="carrozza"></span>
+                </div>
+                <div>
+                  <h6>CODICE BIGLIETTO</h6>
+                  <span id="code-tiket"></span>
+                </div>
+                <div>
+                  <h6>PREZZO</h6>
+                  <span id="output-finalprice"></span><span>€</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-  
       </div>
-    </div>
+    </section>
+    <!-- end TICKET GENERATO -->
 
   </div>
-
 
   <script src="js/script.js"></script>
 </body>
