@@ -25,8 +25,6 @@ button1.addEventListener('click', function(){
   const price = km * priceKm;
   
   emissioneBiglietto.classList.remove('d-none');
-  emissioneBiglietto.classList.add('d-block');
-
   
   if(age == 'Maggiorenne'){
         
@@ -48,23 +46,17 @@ button1.addEventListener('click', function(){
   document.getElementById('output-lastname').innerHTML = lastName;
   document.getElementById('output-discount').innerHTML = discountMessage;
   document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 10) + 1;
-  document.getElementById('code-tiket').innerHTML = getRndInteger(1000,2000);
+  document.getElementById('code-tiket').innerHTML = Math.floor(Math.random() * (10000 - 9000 + 1) + 9000);
   document.getElementById('output-finalprice').innerHTML = finalPrice;
   
 });
 
 button2.addEventListener('click', function(){
   
-  emissioneBiglietto.classList.remove('d-block');
   emissioneBiglietto.classList.add('d-none');
-  location.reload()
   
 });
 
-
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
 
 
 
